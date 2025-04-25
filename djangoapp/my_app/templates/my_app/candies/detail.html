@@ -7,7 +7,11 @@
         <h1>{{ candy.name }}</h1>
         <p class="type">Type: {{ candy.type }}</p>
         <p class="date">Added: {{ candy.created_at|date:"F j, Y" }}</p>
-        <a href="{% url 'candies_index' %}" class="back-link">← Back to Candies</a>
+        <div class="detail-actions">
+            <a href="{% url 'candies_edit' candy.id %}" class="edit-btn">Edit Candy</a>
+            <a href="{% url 'candies_delete' candy.id %}" class="delete-btn">Delete Candy</a>
+            <a href="{% url 'candies_index' %}" class="back-link">← Back to Candies</a>
+        </div>
     </div>
 </div>
 {% endblock %} 

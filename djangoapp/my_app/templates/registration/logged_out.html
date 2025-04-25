@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="auth-form">
+        <h1>Logged Out</h1>
+        <p>You have been successfully logged out.</p>
+        <div class="form-actions">
+            <a href="{% url 'login' %}" class="submit-btn">Log In Again</a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

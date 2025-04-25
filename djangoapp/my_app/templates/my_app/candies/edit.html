@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="candy-form">
+        <h1>Edit {{ candy.name }}</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Candy Name:</label>
+                <input type="text" id="name" name="name" value="{{ candy.name }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="type">Candy Type:</label>
+                <input type="text" id="type" name="type" value="{{ candy.type }}" required>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Save Changes</button>
+                <a href="{% url 'candies_detail' candy.id %}" class="cancel-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %} 
