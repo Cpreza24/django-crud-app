@@ -5,12 +5,10 @@
 <div class="container">
     <h1>Our Candy Collection</h1>
     
-    <div class="candy-grid">
+    <div class="candy-list">
         {% for candy in candies %}
         <div class="candy-card">
-            <h2>{{ candy.name }}</h2>
-            <p class="type">Type: {{ candy.type }}</p>
-            <p class="date">Added: {{ candy.created_at|date:"F j, Y" }}</p>
+            <a href="{% url 'candies_detail' candy.id %}" class="candy-link">{{ candy.name }}</a>
         </div>
         {% empty %}
         <p>No candies available yet.</p>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="candy-detail">
+        <h1>{{ candy.name }}</h1>
+        <p class="type">Type: {{ candy.type }}</p>
+        <p class="date">Added: {{ candy.created_at|date:"F j, Y" }}</p>
+        <a href="{% url 'candies_index' %}" class="back-link">← Back to Candies</a>
+    </div>
+</div>
+{% endblock %} 

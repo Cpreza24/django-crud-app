@@ -10,37 +10,107 @@ h1 {
     margin-bottom: 30px;
 }
 
-.candy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+.candy-list {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .candy-card {
     background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    border: 1px solid #220101;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 
-.candy-card:hover {
-    transform: translateY(-5px);
+.candy-link {
+    color: #220101;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
 }
 
-.candy-card h2 {
-    color: #2c3e50;
-    margin: 0 0 10px 0;
+.candy-link:hover {
+    text-decoration: underline;
+}
+
+.candy-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border: 1px solid #220101;
+    border-radius: 4px;
+}
+
+.candy-detail h1 {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .type {
     color: #666;
-    font-style: italic;
+    margin: 5px 0;
 }
 
 .date {
     color: #999;
     font-size: 0.9em;
     margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #220101;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.candy-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #34495e;
 } 
