@@ -4,6 +4,7 @@ from django.db import migrations, models
 import django.contrib.auth.models
 import django.contrib.auth.validators
 import django.utils.timezone
+import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -54,7 +55,7 @@ class Migration(migrations.Migration):
                 ('type', models.CharField(max_length=50)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('created_by', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='candies', to='my_app.user')),
+                ('created_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='candies', to='auth.user')),
             ],
             options={
                 'verbose_name_plural': 'Candies',
