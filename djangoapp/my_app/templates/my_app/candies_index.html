@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Our Candy Collection</h1>
+    
+    <div class="candy-grid">
+        {% for candy in candies %}
+        <div class="candy-card">
+            <h2>{{ candy.name }}</h2>
+            <p class="type">Type: {{ candy.type }}</p>
+            <p class="date">Added: {{ candy.created_at|date:"F j, Y" }}</p>
+        </div>
+        {% empty %}
+        <p>No candies available yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 
